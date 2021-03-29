@@ -1,0 +1,26 @@
+create database hw1;
+use hw1;
+create table Addressbook (
+	regist_no integer not null,
+    namee varchar(128) not null,
+    address varchar(256),
+    tel_no char(10),
+    mail_address char(20),
+    primary key (regist_no)
+    );
+
+alter table Addressbook add column postal_code char(8);
+insert Addressbook values 
+    ('0001', 'Arizona', '88 Cleveland Ave', '6124263360','88 Cleveland Ave','38889'),
+    ('0002', 'Akansus', '325 Cleveland Dr', '6124226420', '325 Cleveland Dr','88889'),
+    ('0003', 'Tennacci', '399 Cleveland blvd', '6422223360','399 Cleveland blvd','38489'),
+    ('0005', 'Maryland', '899 Cleveland st', '6124226322','899 Cleveland st','38229'),
+    ('0006', 'Alaska', '566 Cleveland rd', '6124226360', '566 Cleveland rd','38329'),
+    ('0007', 'Hawaii', '355 washington ave', '6243360360', '355 washington ave','78889'),
+    ('0008', 'Texas', '55 patrick Ave', '6123363360', '55 patrick Ave','38881'),
+    ('0009', 'Maine', '35 iceland Ave', '6336063360', '35 iceland Ave','38882');
+
+select regist_no from Addressbook;
+select * from Addressbook;
+
+DROP table Addressbook;
